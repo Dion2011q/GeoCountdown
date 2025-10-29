@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #1e3c72, #2a5298);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#countdown {
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.unit {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.number {
+  font-weight: bold;
+  font-size: 2rem;
+}
