@@ -1,15 +1,112 @@
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(120deg, #1e3c72, #2a5298);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-  text-align: center;
-  margin: 0;
+:root{
+  --green: #88B35A;      /* exact uit afbeelding */
+  --bg-gray: #F6F6F6;    /* exact uit afbeelding */
+  --text-gray: #757575;  /* exact uit afbeelding */
+  --white: #ffffff;
 }
+
+/* basis layout */
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  background: var(--bg-gray);
+  color: var(--text-gray);
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* centreer content vergelijkbaar met voorbeeld */
+.container{
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:28px;
+}
+
+/* pagina titel (donkergrijs zoals afbeelding) */
+.page-title{
+  font-weight:300;
+  font-size:28px;
+  line-height:1.6;
+  color: var(--text-gray);
+  margin:0 0 6px 0;
+}
+
+/* countdown box (maakt het visueel passend bij design) */
+.countdown{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  background: rgba(255,255,255,0.0); /* transparant naar voorbeeld (de knop is prominent) */
+  padding: 18px;
+  border-radius: 8px;
+  color: var(--text-gray);
+  font-size:18px;
+}
+
+/* individuele tijdunits */
+.unit{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  min-width:72px;
+}
+
+.number{
+  font-weight:700;
+  font-size:32px;
+  color: var(--text-gray);
+  display:block;
+}
+
+/* CTA knop — stijl zo dat het precies lijkt op afbeelding */
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  text-decoration:none;
+  background: var(--green);
+  color: var(--white);
+  padding: 34px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px rgba(136,179,90,0.08) inset, 0 6px 0 rgba(0,0,0,0.02);
+  font-weight:700;
+  font-size:28px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  border: 4px solid rgba(255,255,255,0.06);
+}
+
+/* mini rond icoon aan de rechterkant van de knop zoals in afbeelding */
+.cta .cta-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background: rgba(255,255,255,0.18);
+  color: var(--white);
+  font-weight:700;
+  font-size:16px;
+}
+
+/* responsive aanpassingen */
+@media (max-width:720px){
+  .page-title{ font-size:20px }
+  .cta{ font-size:18px; padding:20px; }
+  .number{ font-size:24px }
+  .unit{ min-width:56px }
+}
+
 
 h1 {
   font-size: 2rem;
@@ -22,14 +119,4 @@ h1 {
   padding: 20px 40px;
   border-radius: 12px;
   backdrop-filter: blur(6px);
-}
-
-.unit {
-  margin: 0 10px;
-  display: inline-block;
-}
-
-.number {
-  font-weight: bold;
-  font-size: 2rem;
 }
