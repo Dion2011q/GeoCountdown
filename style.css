@@ -10,11 +10,19 @@
 html,body{
   height:100%;
   margin:0;
-  background: var(--bg-gray);
+  background: linear-gradient(135deg, #88B35A 0%, #6FA34E 100%);
   color: var(--text-gray);
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+}
+
+body {
+  display: flex;
+  justify-content: center;   /* centreert horizontaal */
+  align-items: center;       /* centreert verticaal */
+  margin: 0;                 /* verwijdert standaard marge */
+  flex-direction: column;    /* stapelt elementen onder elkaar */
 }
 
 /* centreer content vergelijkbaar met voorbeeld */
