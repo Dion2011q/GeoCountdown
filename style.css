@@ -18,23 +18,22 @@ html, body {
   width: 100%;
   min-width: 100%;
   max-width: 100%;
-  background: linear-gradient(135deg, #88B35A 0%, #6FA34E 100%);
+  background-color: var(--green);
   color: var(--white);
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
-body {
+main {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   text-align: center;
-  min-height: 100vh;
 }
 
 /* Pagina titel */
@@ -48,12 +47,12 @@ body {
 
 /* Countdown blok */
 #countdown {
-  font-size: 2rem;
+  font-size: 3rem;
   background: rgba(255, 255, 255, 0.15);
   padding: 2rem 3rem;
   border-radius: 12px;
   backdrop-filter: blur(6px);
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: inline-block;
   max-width: 90vw;
 }
@@ -114,12 +113,13 @@ body {
 }
 
 /* Logo */
-#summit-logo {
+#img-logo {
   width: 50vw;
   max-width: 600px;
   min-width: 280px;
   height: auto;
   margin-bottom: 1.5rem;
+  border-radius: 12px;
 }
 
 /* Headings */
@@ -134,13 +134,8 @@ h2 {
   margin-bottom: 1.25rem;
 }
 
-/* ========================= */
-/* 📱 RESPONSIVE AANPASSINGEN */
-/* ========================= */
-
-/* Tablets / kleinere laptops */
 @media (max-width: 1024px) {
-  #summit-logo {
+  #img-logo {
     width: 60vw;
     max-width: 480px;
   }
@@ -161,7 +156,7 @@ h2 {
 
 /* Mobiel (tot 720px) */
 @media (max-width:720px){
-  #summit-logo {
+  #img-logo {
     width: 70vw;
     max-width: 380px;
   }
@@ -185,7 +180,7 @@ h2 {
     overflow-y: hidden;
   }
 
-  #summit-logo {
+  #img-logo {
     width: 85vw;
     max-width: 320px;
   }
@@ -225,7 +220,7 @@ h2 {
     align-items: center;
   }
 
-  #summit-logo {
+  #img-logo {
     width: 35vw;
     max-width: 240px;
     margin-bottom: 0.75rem;
