@@ -1,12 +1,25 @@
 function updateCountdown() {
-  const targetDate = new Date('2025-12-31T13:00:00');
+  // Huidige tijd
   const now = new Date();
-  let diff = targetDate - now;
+
+  // Nederlandse tijd "nu"
+  const nowNL = new Date(
+    now.toLocaleString("en-US", { timeZone: "Europe/Amsterdam" })
+  );
+
+  // Volgend nieuwjaar in NL
+  const targetDate = new Date(nowNL);
+  targetDate.setFullYear(targetDate.getFullYear() + 1);
+  targetDate.setMonth(0); // januari
+  targetDate.setDate(1);
+  targetDate.setHours(0, 0, 0, 0);
+
+  let diff = targetDate - nowNL;
 
   const countdownEl = document.getElementById("countdown");
 
   if (diff <= 0) {
-    countdownEl.innerText = "De tijd is aangebroken!";
+    countdownEl.innerText = "Gelukkig Nieuwjaar! 🎆";
     return;
   }
 
