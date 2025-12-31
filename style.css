@@ -1,9 +1,10 @@
 :root {
-  --green: #88B35A;      /* exact uit afbeelding */
+  --green: #0F131F;      /* exact uit afbeelding */
   --bg-gray: #F6F6F6;    /* exact uit afbeelding */
   --text-gray: #757575;  /* exact uit afbeelding */
   --white: #ffffff;
 }
+/* oude kleur 88B35A */
 
 /* Basis layout */
 * {
