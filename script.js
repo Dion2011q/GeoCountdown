@@ -1,5 +1,5 @@
 function updateCountdown() {
-	const targetDate = new Date('2026-1-1T00:00:01')
+	const targetDate = new Date('2025-12-31T23:59:59')
   const now = new Date();
 	let diff = targetdate - now;
   const countdownEl = document.getElementById("countdown");
