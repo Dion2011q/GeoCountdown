@@ -1,8 +1,10 @@
 function updateCountdown() {
-	const targetDate = new Date('2025-11-22T10:15:00')
+  const targetDate = new Date('2026-01-01T00:00:00');
   const now = new Date();
-	let diff = targetdate - now;
+  const diff = targetDate - now;
+
   const countdownEl = document.getElementById("countdown");
+  if (!countdownEl) return;
 
   if (diff <= 0) {
     countdownEl.innerText = "Gelukkig Nieuwjaar! 🎆";
@@ -23,18 +25,28 @@ function updateCountdown() {
   let parts = [];
 
   if (months > 0)
-    parts.push(`<span class="unit"><span class="number">${months}</span> maand${months !== 1 ? 'en' : ''}</span>`);
+    parts.push(
+      `<span class="unit"><span class="number">${months}</span> maand${months !== 1 ? 'en' : ''}</span>`
+    );
 
   if (days > 0 || months > 0)
-    parts.push(`<span class="unit"><span class="number">${remainingDays}</span> dag${remainingDays !== 1 ? 'en' : ''}</span>`);
+    parts.push(
+      `<span class="unit"><span class="number">${remainingDays}</span> dag${remainingDays !== 1 ? 'en' : ''}</span>`
+    );
 
   if (hours > 0 || days > 0 || months > 0)
-    parts.push(`<span class="unit"><span class="number">${remainingHours}</span> uur</span>`);
+    parts.push(
+      `<span class="unit"><span class="number">${remainingHours}</span> uur</span>`
+    );
 
   if (minutes > 0 || hours > 0 || days > 0 || months > 0)
-    parts.push(`<span class="unit"><span class="number">${remainingMinutes}</span> min</span>`);
+    parts.push(
+      `<span class="unit"><span class="number">${remainingMinutes}</span> min</span>`
+    );
 
-  parts.push(`<span class="unit"><span class="number">${remainingSeconds}</span> sec</span>`);
+  parts.push(
+    `<span class="unit"><span class="number">${remainingSeconds}</span> sec</span>`
+  );
 
   countdownEl.innerHTML = parts.join(' ');
 }
