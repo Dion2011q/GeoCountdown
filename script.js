@@ -1,21 +1,7 @@
 function updateCountdown() {
-  // Huidige tijd
+	const targetDate = new Date('2026-1-1T00:00:00')
   const now = new Date();
-
-  // Nederlandse tijd "nu"
-  const nowNL = new Date(
-    now.toLocaleString("en-US", { timeZone: "Europe/Amsterdam" })
-  );
-
-  // Volgend nieuwjaar in NL
-  const targetDate = new Date(nowNL);
-  targetDate.setFullYear(targetDate.getFullYear() + 1);
-  targetDate.setMonth(0); // januari
-  targetDate.setDate(1);
-  targetDate.setHours(0, 0, 0, 0);
-
-  let diff = targetDate - nowNL;
-
+	let diff = targetdate - now;
   const countdownEl = document.getElementById("countdown");
 
   if (diff <= 0) {
